@@ -28,7 +28,7 @@ class Pokemon
     db.execute(sql, id).map do |row|
       self.new(id: row[0], name: row[1], type: row[2], db: db)
     end.first
-    
+    #somthing is breaking when testing after completion of this method. The tests complete, then errors and kicks me out of the file location.
   end
   
 end
